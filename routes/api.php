@@ -20,8 +20,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserCT;
 use App\Http\Controllers\GoogleAuthController;
 
-Route::get('/auth/google', [GoogleAuthController::class, 'redirect']);
-Route::get('/auth/google/callback', [GoogleAuthController::class, 'callbackGoogle']);
+Route::get('/oauth/register', [GoogleAuthController::class, 'redirect']);
+Route::get('/oauth/register/callback', [GoogleAuthController::class, 'callbackGoogle']);
 
 Route::post('login', [UserCT::class, 'login']);
 Route::post('register', [UserCT::class, 'register']);
